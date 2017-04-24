@@ -1,0 +1,32 @@
+id: 40ec0e1b-5efb-4467-92a6-1d54f9d87167
+version: v2
+name: muditatestsdockerpython
+apptype: api
+language: python
+containerName: muditatestsdockerpython
+toolchain:
+  id: 58f956498ef1e700214218ea
+  name: Qubeship-Python-Toolchain
+opinion:
+  id: 58f95649e936e0000b151362
+  name: Qubeship default opinion
+endpoint:
+  id: 58ee79cc238503000b74d7b1
+  name: Qubeship Sandbox Cluster
+  type: target
+variables:
+  - name: APP_VERSION
+    value: v0.1
+build:
+  compile:
+    publish:
+     - dist/
+bake:
+  skip: false
+test:
+  skip: true
+deploy_to_qa:
+  skip: true
+deploy_to_prod:
+  skip: false
+
